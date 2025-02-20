@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: testItem
   m_EditorClassIdentifier: 
   ID: 1
-  DisplayName: 
+  DisplayName: coin
   Description: 'this is item 1
 
 '
   Icon: {fileID: 0}
-  MaxStack: 0
+  MaxStack: 5

@@ -29,6 +29,12 @@ public class InventorySlot
         stackSize = -1;
     }
 
+    public void UpdateInventorySlot(InventoryItem data, int amount)
+    {
+        itemData = data;
+        stackSize = amount;
+    }
+
 
     // Check the stacking of items and put the leftovers on the mouse when maxSize is reached
     public bool RoomLeftInStack(int amountToAdd, out int amountRemaining)
@@ -40,8 +46,7 @@ public class InventorySlot
     // Check if the slot reach the maxStack or not
     public bool RoomLeftInStack(int amountToAdd)
     {
-        if (stackSize + amountToAdd <= itemData.MaxStack)
-            return true;
+        if (stackSize + amountToAdd <= itemData.MaxStack) return true;
         else return false;
     }
 
